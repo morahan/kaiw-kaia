@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { SignedIn, SignedOut, SignIn, UserButton } from '@clerk/react';
 import './App.css';
 
 const API_BASE = 'http://localhost:3001/api';
@@ -61,6 +62,7 @@ function App() {
     : 0;
 
   return (
+    <SignedIn>
     <div className="dashboard">
       <div className="ocean-bg">
         <div className="bubble bubble-1"></div>
@@ -78,6 +80,7 @@ function App() {
             <span className="tagline">Trend Hunter</span>
           </div>
           <div className="header-stats">
+            <UserButton afterSignOutUrl="/" />
             <div className="live-indicator">
               <span className="pulse"></span>
               LIVE
@@ -284,6 +287,7 @@ function App() {
         <p>🌊 Kaia Dashboard v2 — Riding the trend wave</p>
       </footer>
     </div>
+    </SignedIn>
   );
 }
 
