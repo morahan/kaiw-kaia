@@ -1,0 +1,13 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #0a0a0f; color: #fff; min-height: 100vh; }
+.dashboard { max-width: 800px; margin: 0 auto; padding: 2rem; }
+header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #222; }
+header .emoji { font-size: 3rem; }
+header h1 { font-size: 2rem; background: linear-gradient(90deg, var(--color), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+header p { color: #666; }
+.section { background: #111; border: 1px solid #222; border-radius: 12px; padding: 1.5rem; }
+.section h2 { font-size: 1rem; color: #666; margin-bottom: 1rem; }
+.item { display: flex; justify-content: space-between; padding: 0.75rem; border-radius: 8px; margin-bottom: 0.5rem; background: #0a0a0f; }
+.item.done .badge { color: #22c55e; }
+.item.pending .badge { color: #f59e0b; }
+
